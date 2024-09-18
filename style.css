@@ -1,0 +1,800 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #2575fc;
+    border-radius: 5px;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.slide {
+    display: none;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out infinite;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Skill Bars */
+.skill-bar {
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    position: relative;
+}
+
+.progress-done {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border-radius: 20px;
+    height: 25px;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+
+[data-done] {
+    width: calc(var(--done) + '%');
+    opacity: 1;
+}
+
+/* Resume Section Styles */
+.resume-content {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.resume-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Resume Highlights Section */
+.resume-highlights {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.highlight:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.highlight-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.highlight h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.highlight p {
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+/* Interactive Download Button */
+.resume-download-btn {
+    background-color: #fff;
+    color: #2575fc;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.4s, transform 0.4s, border-color 0.4s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.resume-download-btn i {
+    margin-right: 10px;
+}
+
+.resume-download-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-5px);
+}
+
+.resume-download-btn:active {
+    transform: scale(0.95);
+}
+
+/* Blog Section Styling */
+.blog {
+    background: #f0f0f0;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: filter 0.3s;
+}
+
+.blog-post:hover .blog-image {
+    filter: brightness(0.8);
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2575fc;
+}
+
+.blog-excerpt {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    background: #2575fc;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background: #6a11cb;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.page-link {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    color: #2575fc;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.page-link.active {
+    background: #2575fc;
+    color: #fff;
+}
+
+.page-link:hover {
+    background: #6a11cb;
+    color: #fff;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Group Styling */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input,
+.input-group textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Send Button */
+.send-btn {
+    background: #fff;
+    color: #2575fc;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.send-btn:hover {
+    background: #6a11cb;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #fff;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: none;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+blockquote {
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+blockquote footer {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Slider Controls */
+.testimonial-controls {
+    margin-top: 20px;
+}
+
+.control {
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.control:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #f7f9fc;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #6a11cb;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.skills-category {
+    margin-bottom: 50px;
+}
+
+.skills-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #2575fc;
+}
+
+.skills-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item {
+    font-size: 18px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    width: 80%;
+    max-width: 300px;
+}
+
+.skill-item:hover {
+    background-color: #2575fc;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Social Media Section */
+.social-media-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #6a11cb;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.social-icon span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.social-icon:hover {
+    background-color: #2575fc;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Icon Colors */
+.social-icon.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.social-icon.facebook:hover {
+    background-color: #1877f2;
+}
+
+.social-icon.instagram:hover {
+    background-color: #c32aa3;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2;
+}
+
+/* About Me Section */
+.about-me-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #6a11cb;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* About Me Content */
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-picture {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-picture:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2575fc;
+}
+
+.bio-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
